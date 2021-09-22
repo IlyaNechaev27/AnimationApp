@@ -8,15 +8,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Animation View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AnimationViewController" customModule="AnimationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qas-K9-9mG">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qas-K9-9mG" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="43" y="53" width="289" height="184"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rjc-nm-qXR">
@@ -84,6 +84,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="runAnimationButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="V9O-ZW-DQp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -97,6 +100,15 @@
                             <constraint firstItem="cXR-eN-CPQ" firstAttribute="top" secondItem="Qas-K9-9mG" secondAttribute="bottom" constant="220" id="zXq-hC-q7R"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="Qas-K9-9mG" id="Z7A-IQ-6mA"/>
+                        <outlet property="curveLabel" destination="glb-6N-dpv" id="wbQ-vo-Kux"/>
+                        <outlet property="delayLabel" destination="NQG-60-nNB" id="glH-JB-sub"/>
+                        <outlet property="durationLabel" destination="Aeu-mY-uHn" id="PnU-sx-A6d"/>
+                        <outlet property="forceLabel" destination="ECD-Km-usk" id="TG0-hL-ilx"/>
+                        <outlet property="presetLabel" destination="PLY-II-TtZ" id="PJG-mM-53Y"/>
+                        <outlet property="runAnimationButton" destination="cXR-eN-CPQ" id="vlA-yB-Gdn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

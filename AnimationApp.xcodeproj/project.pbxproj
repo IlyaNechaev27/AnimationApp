@@ -3,14 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6FA706ED136879BE90A055D7 /* Pods_AnimationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7E275DA24641AB27CC381E /* Pods_AnimationApp.framework */; };
+		BDAD305A26FB24BD003B7F21 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAD305926FB24BD003B7F21 /* Animation.swift */; };
+		BDAD305C26FB266D003B7F21 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAD305B26FB266D003B7F21 /* DataManager.swift */; };
 		BDD4FBFD26FB1F3600EDAFA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD4FBFC26FB1F3600EDAFA9 /* AppDelegate.swift */; };
 		BDD4FBFF26FB1F3600EDAFA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD4FBFE26FB1F3600EDAFA9 /* SceneDelegate.swift */; };
-		BDD4FC0126FB1F3600EDAFA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD4FC0026FB1F3600EDAFA9 /* ViewController.swift */; };
+		BDD4FC0126FB1F3600EDAFA9 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD4FC0026FB1F3600EDAFA9 /* AnimationViewController.swift */; };
 		BDD4FC0426FB1F3600EDAFA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD4FC0226FB1F3600EDAFA9 /* Main.storyboard */; };
 		BDD4FC0626FB1F3700EDAFA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD4FC0526FB1F3700EDAFA9 /* Assets.xcassets */; };
 		BDD4FC0926FB1F3700EDAFA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD4FC0726FB1F3700EDAFA9 /* LaunchScreen.storyboard */; };
@@ -20,10 +22,12 @@
 		13B2C6F98DB3EA7E000991FD /* Pods-AnimationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationApp.release.xcconfig"; path = "Target Support Files/Pods-AnimationApp/Pods-AnimationApp.release.xcconfig"; sourceTree = "<group>"; };
 		4D7E275DA24641AB27CC381E /* Pods_AnimationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB4FB4697954D39C9498E58 /* Pods-AnimationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationApp.debug.xcconfig"; path = "Target Support Files/Pods-AnimationApp/Pods-AnimationApp.debug.xcconfig"; sourceTree = "<group>"; };
+		BDAD305926FB24BD003B7F21 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		BDAD305B26FB266D003B7F21 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BDD4FBF926FB1F3600EDAFA9 /* AnimationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD4FBFC26FB1F3600EDAFA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDD4FBFE26FB1F3600EDAFA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BDD4FC0026FB1F3600EDAFA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BDD4FC0026FB1F3600EDAFA9 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		BDD4FC0326FB1F3600EDAFA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDD4FC0526FB1F3700EDAFA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDD4FC0826FB1F3700EDAFA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,7 +52,6 @@
 				9BB4FB4697954D39C9498E58 /* Pods-AnimationApp.debug.xcconfig */,
 				13B2C6F98DB3EA7E000991FD /* Pods-AnimationApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -58,6 +61,57 @@
 				4D7E275DA24641AB27CC381E /* Pods_AnimationApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD2CA9A326FB32EA0060F0E6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BDD4FBFC26FB1F3600EDAFA9 /* AppDelegate.swift */,
+				BDD4FBFE26FB1F3600EDAFA9 /* SceneDelegate.swift */,
+				BDD4FC0A26FB1F3700EDAFA9 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BD2CA9A426FB32F20060F0E6 /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				BDD4FC0526FB1F3700EDAFA9 /* Assets.xcassets */,
+			);
+			path = Resouces;
+			sourceTree = "<group>";
+		};
+		BD2CA9A526FB330C0060F0E6 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				BDD4FC0226FB1F3600EDAFA9 /* Main.storyboard */,
+				BDD4FC0726FB1F3700EDAFA9 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		BD2CA9A626FB331A0060F0E6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BDD4FC0026FB1F3600EDAFA9 /* AnimationViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BD2CA9A726FB33240060F0E6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BDAD305B26FB266D003B7F21 /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BD2CA9A826FB33400060F0E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BDAD305926FB24BD003B7F21 /* Animation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		BDD4FBF026FB1F3600EDAFA9 = {
@@ -81,13 +135,12 @@
 		BDD4FBFB26FB1F3600EDAFA9 /* AnimationApp */ = {
 			isa = PBXGroup;
 			children = (
-				BDD4FBFC26FB1F3600EDAFA9 /* AppDelegate.swift */,
-				BDD4FBFE26FB1F3600EDAFA9 /* SceneDelegate.swift */,
-				BDD4FC0026FB1F3600EDAFA9 /* ViewController.swift */,
-				BDD4FC0226FB1F3600EDAFA9 /* Main.storyboard */,
-				BDD4FC0526FB1F3700EDAFA9 /* Assets.xcassets */,
-				BDD4FC0726FB1F3700EDAFA9 /* LaunchScreen.storyboard */,
-				BDD4FC0A26FB1F3700EDAFA9 /* Info.plist */,
+				BD2CA9A826FB33400060F0E6 /* Models */,
+				BD2CA9A526FB330C0060F0E6 /* StoryBoards */,
+				BD2CA9A626FB331A0060F0E6 /* ViewControllers */,
+				BD2CA9A726FB33240060F0E6 /* Services */,
+				BD2CA9A326FB32EA0060F0E6 /* App */,
+				BD2CA9A426FB32F20060F0E6 /* Resouces */,
 			);
 			path = AnimationApp;
 			sourceTree = "<group>";
@@ -206,8 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD4FC0126FB1F3600EDAFA9 /* ViewController.swift in Sources */,
+				BDD4FC0126FB1F3600EDAFA9 /* AnimationViewController.swift in Sources */,
+				BDAD305C26FB266D003B7F21 /* DataManager.swift in Sources */,
 				BDD4FBFD26FB1F3600EDAFA9 /* AppDelegate.swift in Sources */,
+				BDAD305A26FB24BD003B7F21 /* Animation.swift in Sources */,
 				BDD4FBFF26FB1F3600EDAFA9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,7 +413,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N2N5N7MK77;
-				INFOPLIST_FILE = AnimationApp/Info.plist;
+				INFOPLIST_FILE = AnimationApp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +433,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N2N5N7MK77;
-				INFOPLIST_FILE = AnimationApp/Info.plist;
+				INFOPLIST_FILE = AnimationApp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
